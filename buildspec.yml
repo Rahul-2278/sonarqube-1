@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       #java: openjdk8
-      java: corretto17
+      java: corretto9
   pre_build:
     commands:
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 660061364911.dkr.ecr.ap-south-1.amazonaws.com
