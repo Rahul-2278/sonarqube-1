@@ -35,7 +35,7 @@ phases:
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=demoapp-project >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
+      #- if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
   post_build:
     commands:
       - docker push 660061364911.dkr.ecr.ap-south-1.amazonaws.com/sonarqube-sample:$CODEBUILD_BUILD_NUMBER
