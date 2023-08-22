@@ -20,7 +20,7 @@ phases:
       - pwd
       - docker build -t 660061364911.dkr.ecr.ap-south-1.amazonaws.com/sonarqube-sample:$CODEBUILD_BUILD_NUMBER .
       - mvn test
-      - mvn sonar:sonar -Dsonar.login=0ee32af700095aee3fc97da5f891be2d4d1000b2 -Dsonar.host.url=http://10.221.43.151:9000/ -Dsonar.projectKey=demoapp-project
+      - mvn sonar:sonar -Dsonar.login=0ee32af700095aee3fc97da5f891be2d4d1000b2 -Dsonar.host.url=http://10.221.43.151:9000/
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=demoapp-project >result.json
       - cat result.json
