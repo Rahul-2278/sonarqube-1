@@ -44,6 +44,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+	
 
   <dependencies>
 
@@ -51,6 +52,13 @@
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-grizzly2-http</artifactId>
     </dependency>
+
+<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-site-plugin</artifactId>
+  <version>4.0.0-M8</version>
+  <type>maven-plugin</type>
+</dependency>
 
     <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
