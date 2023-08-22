@@ -23,7 +23,7 @@ phases:
   build:
     commands:
       - pwd
-      - docker build -t 660061364911.dkr.ecr.ap-south-1.amazonaws.com/sonarqube-sample:$CODEBUILD_BUILD_NUMBER .
+      #- docker build -t 660061364911.dkr.ecr.ap-south-1.amazonaws.com/sonarqube-sample:$CODEBUILD_BUILD_NUMBER .
       - mvn test
       - mvn sonar:sonar -Dsonar.login=a8bde54ffcc079468c7053baf2bbea4f8d786c00 -Dsonar.host.url=http://10.221.43.151:9000/ -Dsonar.projectkey=demoapp-project
       - sleep 5
