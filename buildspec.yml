@@ -3,11 +3,11 @@ phases:
   install:
     runtime-versions:
       #java: openjdk8
-      java: corretto8
+      java: corretto11
   pre_build:
     commands:
-      - wget https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz
-      - tar xvf apache-maven-3.9.0-bin.tar.gz -C /opt
+      #- wget https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz
+      #- tar xvf apache-maven-3.9.0-bin.tar.gz -C /opt
       - ln -s /opt/apache-maven-3.9.0 /opt/maven
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 660061364911.dkr.ecr.ap-south-1.amazonaws.com
       - yum -y update
